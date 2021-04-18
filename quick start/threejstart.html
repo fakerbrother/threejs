@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>threejs quick start</title>
+    <!--http绝对地址远程加载-->
+    <script src="./three.js"></script>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+<script>
+    // 创建场景对象
+    let scene = new THREE.Scene();
+
+    // 创建网格模型 一个立方体几何对象
+    let geometry = new THREE.BoxGeometry(100, 100, 100);
+
+    let material = new THREE.MeshLambertMaterial({
+        color: 0x0000ff
+    });  // 材质对象
+
+    let mesh = new THREE.Mesh(geometry, material);  // 网格模型对象
+
+    scene.add(mesh);
+</script>
+</body>
+</html>
